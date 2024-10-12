@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0; /* Optional: Also remove padding if needed */
+  overflow: hidden; /* Optional: Prevent scrollbars */
+  border: "1px solid red";
+}
+canvas {
+  position: absolute; /* Fill the container */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Canvas in the background */
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Roboto Mono", monospace;
+}
