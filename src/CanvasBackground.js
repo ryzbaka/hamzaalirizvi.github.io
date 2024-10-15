@@ -51,13 +51,15 @@ const CanvasBackground = () => {
     const n = Math.ceil(canvasSize.width/s);
     const m = Math.ceil(canvasSize.height/s);
     // const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
-    const liveColor = p.color(0,20)
+    const liveColor = p.color(0,50)
     const renderGrid = (grid,p) => {
       for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {
           if (grid[i][j]) {
-            p.fill(liveColor);
-            p.rect(s * i, s * j, s, s);
+            p.stroke(liveColor);
+            // p.rect(s * i, s * j, s, s);
+            // p.ellipse(s * i, s * j, s, s);
+            p.point(s * i, s * j);
           }
           //  else {
           //   p.fill("white");
@@ -68,18 +70,25 @@ const CanvasBackground = () => {
 
     p.setup = ()=>{
       p.createCanvas(canvasSize.width, canvasSize.height);
-      p.noStroke()
+      // p.noStroke()
+      p.strokeWeight(5)
       grid = [];
       const midY = m%2==0?m/2:m+1/2
+      const midX = n%2==0?n/2:n+1/2
       for (let i = 0; i < n; i++) {
         const newRow = [];
         for (let j = 0; j < m; j++) {
-          newRow.push(Math.round(Math.random()));
-          // if(j>midY){
-          //   newRow.push(0)
-          // }else{
-          //   newRow.push(1)
-          // }
+          if(j<midY){
+            if(i<midX){
+              newRow.push(1)
+            }else{
+
+              newRow.push(0)
+            }
+          }else{
+            // newRow.push(1)
+            newRow.push(Math.round(Math.random()));
+          }
         }
         grid.push(newRow);
       }
