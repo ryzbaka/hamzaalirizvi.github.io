@@ -47,7 +47,7 @@ const CanvasBackground = () => {
     //   p.filter(p.BLUR, 5); // Adjust blur amount as needed
     // };
     let grid;
-    const s = 20;
+    const s = 10;
     const n = Math.ceil(canvasSize.width/s);
     const m = Math.ceil(canvasSize.height/s);
     const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
@@ -126,7 +126,7 @@ const CanvasBackground = () => {
 
     p.draw = ()=>{
       // frameRate(0.1)
-      p.frameRate(10);
+      p.frameRate(7);
       p.background(220);
       renderGrid(grid,p);
       grid = generateNextGeneration(grid);
