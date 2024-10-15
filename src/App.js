@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <CanvasBackground/>
-      <div className="content" style={{marginLeft:10,background:"white",display:"inline-block",width:"auto",padding:10,border:"5px dashed black",marginTop:10}}>
+      <div className="content" style={{marginLeft:10,background:"rgba(255,255,255,0.8)",display:"inline-block",width:"auto",padding:10,border:"5px dashed black",marginTop:10}}>
         <TypeAnimation
           sequence={[
             3000,
