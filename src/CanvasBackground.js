@@ -50,12 +50,12 @@ const CanvasBackground = () => {
     const s = 20;
     const n = Math.ceil(canvasSize.width/s);
     const m = Math.ceil(canvasSize.height/s);
-
+    const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
     const renderGrid = (grid,p) => {
       for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {
           if (grid[i][j]) {
-            p.fill(p.random(255),p.random(255),p.random(255),100);
+            p.fill(liveColor);
           } else {
             p.fill("white");
           }
