@@ -51,7 +51,7 @@ const CanvasBackground = () => {
     const n = Math.ceil(canvasSize.width/s);
     const m = Math.ceil(canvasSize.height/s);
     // const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
-    const liveColor = p.color(0,70)
+    const liveColor = p.color(0,20)
     const renderGrid = (grid,p) => {
       for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {

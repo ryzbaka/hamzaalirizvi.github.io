@@ -2,9 +2,9 @@ import CanvasBackground from "./CanvasBackground";
 import { TypeAnimation } from "react-type-animation";
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{display:"flex",justifyContent:"center"}}>
       <CanvasBackground/>
-      <div className="content" style={{marginLeft:10,background:"rgba(255,255,255,0.8)",display:"inline-block",width:"auto",padding:10,border:"5px dashed black",marginTop:10}}>
+      <div className="content" style={{marginLeft:10,background:"rgba(255,255,255,0.8)",display:"inline-block",width:"auto",padding:10,border:"5px dashed black",marginTop:10,justifyContent:"center"}}>
         <TypeAnimation
           sequence={[
             3000,
