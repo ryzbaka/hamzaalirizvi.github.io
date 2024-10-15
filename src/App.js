@@ -30,6 +30,7 @@ function App() {
             "Statistical Analysis",
             2000,
             "Distributed Computing",
+            2000
           ].map(el=>{
             if(typeof(el)=="string"){
               return "> "+el
