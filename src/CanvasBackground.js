@@ -47,10 +47,11 @@ const CanvasBackground = () => {
     //   p.filter(p.BLUR, 5); // Adjust blur amount as needed
     // };
     let grid;
-    const s = 10;
+    const s = 5;
     const n = Math.ceil(canvasSize.width/s);
     const m = Math.ceil(canvasSize.height/s);
-    const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
+    // const liveColor = p.color(p.random(255),p.random(255),p.random(255),50)
+    const liveColor = p.color(0,0,p.random(255),70)
     const renderGrid = (grid,p) => {
       for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {
@@ -126,10 +127,10 @@ const CanvasBackground = () => {
 
     p.draw = ()=>{
       // frameRate(0.1)
-      p.frameRate(7);
+      p.frameRate(10);
       p.background(220);
-      renderGrid(grid,p);
       grid = generateNextGeneration(grid);
+      renderGrid(grid,p);
     }
     ////
     // p.windowResized = () => {
