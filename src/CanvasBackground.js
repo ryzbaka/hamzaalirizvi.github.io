@@ -135,7 +135,7 @@ const CanvasBackground = () => {
     p.draw = ()=>{
       // frameRate(0.1)
       p.frameRate(10);
-      p.background("white");
+      p.background(255,50);
       grid = generateNextGeneration(grid);
       renderGrid(grid,p);
     }
