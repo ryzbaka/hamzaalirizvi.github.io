@@ -78,17 +78,18 @@ const CanvasBackground = () => {
       for (let i = 0; i < n; i++) {
         const newRow = [];
         for (let j = 0; j < m; j++) {
-          if(j<midY){
-            if(i<midX){
-              newRow.push(1)
-            }else{
+          // if(j<midY){
+          //   if(i<midX){
+          //     newRow.push(1)
+          //   }else{
 
-              newRow.push(0)
-            }
-          }else{
-            // newRow.push(1)
+          //     newRow.push(0)
+          //   }
+          // }else{
+          //   // newRow.push(1)
+          //   newRow.push(Math.round(Math.random()));
+          // }
             newRow.push(Math.round(Math.random()));
-          }
         }
         grid.push(newRow);
       }
